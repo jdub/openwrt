@@ -5,16 +5,20 @@ This is where I goof around with OpenWrt. Take a look at the other branches for 
 
 ## Current Projects
 
-### glibc
+### glibc 2.21 (glibc)
 
-Bringing modern glibc 2.21 back into OpenWrt, as an alternative to the no-longer-maintained eglibc.
+Bringing modern glibc back into OpenWrt, as an alternative to the no-longer-maintained eglibc.
+
+### uClibc snapshots
+
+The last uClibc release was in May 2012, and there have been changes in git since, so having a snapshot option would be grouse.
+
+
+## See Also
 
 ### nodejs
 
 Packages for node.js and io.js
-
-
-## See Also
 
 ### systemd
 
