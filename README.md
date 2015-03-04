@@ -9,6 +9,10 @@ This is where I goof around with OpenWrt. Take a look at the other branches for 
 
 Bringing modern glibc back into OpenWrt, as an alternative to the no-longer-maintained eglibc.
 
+### Go support (golang)
+
+Hopefully shepherding Geert-Johan's [gccgo/libgo patches](https://github.com/GeertJohan/openwrt-go/tree/add-gccgo-and-libgo) into mainline.
+
 ### uClibc snapshots
 
 The last uClibc release was in May 2012, and there have been changes in git since, so having a snapshot option would be grouse.
