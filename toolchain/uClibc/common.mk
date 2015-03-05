@@ -15,8 +15,8 @@ LIBC_SO_VERSION:=$(PKG_VERSION)
 PATCH_DIR:=$(PATH_PREFIX)/patches-$(PKG_VERSION)
 CONFIG_DIR:=$(PATH_PREFIX)/config-$(PKG_VERSION)
 
-PKG_SNAPSHOT:=$(if $(findstring .,$(PKG_VERSION)),,y)
-ifdef $(PKG_SNAPSHOT)
+UCLIBC_SNAPSHOT:=$(findstring snapshot,$(PKG_VERSION))
+ifdef UCLIBC_SNAPSHOT
 PKG_SOURCE_URL:=http://www.uclibc.org/downloads/snapshots/
 LIBC_SO_VERSION:=0.9.34-git
 endif
@@ -75,7 +75,7 @@ define Host/Prepare
 			$(QUILT_CMD) push -a; \
 		fi
 	)
-	$(if $(PKG_SNAPSHOT), \
+	$(if $(UCLIBC_SNAPSHOT), \
 		rm -d $(BUILD_DIR_TOOLCHAIN)/$(PKG_NAME)-$(PKG_VERSION); \
 		mv $(BUILD_DIR_TOOLCHAIN)/$(PKG_NAME) $(BUILD_DIR_TOOLCHAIN)/$(PKG_NAME)-$(PKG_VERSION)
 	)
